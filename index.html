@@ -1,28 +1,76 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Derek's Responsive Website 2</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-<header>
-    <h1>Welcome to Derek's Responsive Website</h1>
-    <button id="theme-toggle" class="toggle-btn">Toggle Theme</button>
-</header>
+/* General layout upgrades */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: aliceblue;
+  color: darkblue;
+}
 
-<main>
-    <section>
-        <h2>About This Site</h2>
-        <p>This site showcases a responsive design and dark/light mode toggle using semantic HTML, CSS, and JavaScript.</p>
-    </section>
-</main>
+header {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
 
-<footer>
-    <p>&copy; 2025 Derek McCrary</p>
-</footer>
+.toggle-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #8ab4f8;
+  color: #0d1b2a;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-<script src="script.js"></script>
-</body>
-</html>
+.toggle-btn:hover {
+  background-color: #609ff3;
+}
+
+section {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+footer {
+  background-color: #1e3c72;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Dark theme enhancements */
+[data-theme="dark"] {
+  background-color: #1a1a1a;
+  color: #8ab4f8;
+}
+
+[data-theme="dark"] header,
+[data-theme="dark"] footer {
+  background-color: #111;
+  color: #8ab4f8;
+}
+
+[data-theme="dark"] section {
+  background-color: #222;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.1);
+}
+
+[data-theme="dark"] .toggle-btn {
+  background-color: #8ab4f8;
+  color: #1a1a1a;
+}
+
+[data-theme="dark"] .toggle-btn:hover {
+  background-color: #609ff3;
+}
